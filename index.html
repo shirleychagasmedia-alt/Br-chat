@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BR Chat - Seu Discord Brasileiro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login">
+    <h1>BR Chat</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+    <button id="btn-entrar">Entrar</button>
+  </div>
+
+  <div id="app">
+    <div id="sidebar">
+      <h2>Salas</h2>
+      <div id="sala-geral" class="sala">Geral</div>
+      <div id="sala-memes" class="sala">Memes</div>
+      <div id="sala-jogos" class="sala">Jogos</div>
+    </div>
+    <div id="chat">
+      <div id="mensagens"></div>
+      <div id="input-area">
+        <input type="text" id="msg" placeholder="Digite uma mensagem..." />
+        <button id="btn-enviar">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* =================================================================
+   1. RESET E ESTILOS GLOBAIS
+   ================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #36393f;
+  color: #dcddde;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* =================================================================
+   2. TELAS DE LOGIN E APP (CONTÊINERES PRINCIPAIS)
+   ================================================================= */
+#login {
+  width: 90%;
+  max-width: 400px;
+  background: #2f3136;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.24);
+  text-align: center;
+}
+
+#app {
+  display: none; /* COMEÇA ESCONDIDO */
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  background: #2f3136;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.24);
+  overflow: hidden;
+}
+
+/* =================================================================
+   3. COMPONENTES (BOTÕES E INPUTS)
+   ================================================================= */
+#login h1 {
+  color: #00FF88;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #222428;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #40444b;
+  color: #dcddde;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #00FF88;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #00FF88;
+  color: #1e2124;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background: #00e67a;
+}
+
+/* =================================================================
+   4. SIDEBAR (BARRA LATERAL DAS SALAS)
+   ================================================================= */
+#sidebar {
+  width: 240px;
+  background: #2f3136;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar h2 {
+  color: #96989d;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.sala {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #96989d;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sala:hover, .sala.ativa {
+  background: #40444b;
+  color: #ffffff;
+}
+
+/* =================================================================
+   5. ÁREA DO CHAT
+   ================================================================= */
+#chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #36393f;
+}
+
+#mensagens {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#mensagens::-webkit-scrollbar { width: 8px; }
+#mensagens::-webkit-scrollbar-track { background: #2f3136; }
+#mensagens::-webkit-scrollbar-thumb { background: #202225; border-radius: 4px; }
+
+.mensagem {
+  padding: 4px 20px;
+  margin-bottom: 12px;
+}
+
+.mensagem strong {
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+/* =================================================================
+   6. ÁREA DE DIGITAÇÃO
+   ================================================================= */
+#input-area {
+  display: flex;
+  padding: 20px;
+  background: #36393f;
+}
+
+#input-area input {
+  flex: 1;
+  margin: 0;
+  margin-right: 15px;
+  background-color: #40444b;
+}
+
+#input-area button {
+  width: auto;
+  padding: 0 25px;
+  flex-shrink: 0;
+}
